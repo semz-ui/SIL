@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { register, reset } from "../features/auth/authSlice";
+import "./ListItem.css";
 
 function Register() {
   const [data, setData] = useState({
@@ -58,6 +59,7 @@ function Register() {
           onChange={onChange}
           value={email}
           name="email"
+          className="input"
         />
         <input
           type="password"
@@ -65,6 +67,7 @@ function Register() {
           onChange={onChange}
           value={password}
           name="password"
+          className="input"
         />
         <input
           type="password"
@@ -72,8 +75,9 @@ function Register() {
           onChange={onChange}
           value={password2}
           name="password2"
+          className="input"
         />
-        <input type="submit" value="Register" />
+        <input type="submit" value="Register" className="btn" />
       </form>
     </div>
   );
