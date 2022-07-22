@@ -25,7 +25,7 @@ function Register() {
     }
     if (isSuccess || user) {
       toast.success("Registeration successfull");
-      navigate("/login");
+      navigate("/content");
     }
     dispatch(reset());
   }, [user, isError, isSuccess, message, dispatch, navigate]);
